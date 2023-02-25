@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import nc from 'next-connect'
-import config from '../../../utils/sanity-config'
-import client from '../../../utils/sanity-client'
+import client, { config } from '../../../utils/sanity-client'
 import { DataType } from '../../../types/DataType'
 import axios from 'axios'
 

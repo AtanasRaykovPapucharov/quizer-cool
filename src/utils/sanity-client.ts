@@ -1,6 +1,6 @@
 import { createClient, SanityClient, type ClientConfig } from "@sanity/client";
 
-const config: ClientConfig = {
+export const config: ClientConfig = {
   projectId: "oir5cjyp",
   dataset: "production",
   useCdn: false,
