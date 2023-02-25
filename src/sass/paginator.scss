@@ -1,0 +1,28 @@
+main div .paginator ul {
+  margin-left: -32px;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    width: 28px;
+    height: 26px;
+    margin-right: 5px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  li.previous, li.next {
+    border: none;
+    background-color: transparent;
+  }
+
+  li.selected {
+    background-color: $pagin-btn;
+    border: 1px solid $borders;
+
+    a {
+      color: $dark-blue;
+    }
+  }
+}

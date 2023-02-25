@@ -1,0 +1,66 @@
+.topper {
+    height: 30px;
+    background-image: url('../assets/milky-way.jpg');
+    color: whitesmoke;
+    margin: -2px 0 5px 0;
+    padding-top: 3px;
+}
+
+.header {
+    height: 30px;
+    height: 96px;
+    margin-top: -4px;
+    background-size: 100%;
+    border-bottom: 5px solid $orange;
+    box-shadow: 0 3px $borders;
+    
+    .aside a .logo {
+        margin-top: 6px;
+    }
+
+    .aside-right {
+        padding-top: 60px;
+
+        img {
+            position: absolute;
+            top: 66px;
+            right: 0px;
+        }
+    }
+
+    .kids-middle {
+        display: none;
+    }
+    
+    .kids-big {
+        display: none;
+    }
+}
+
+@media (min-width: 500px) {
+    .header {
+        
+        .kids-small {
+            display: none;
+        }
+        
+        .kids-middle {
+            display: inherit;
+            margin-left: 25%;
+        }
+    }
+}
+
+// @media (min-width: 680px) {
+
+//     .header {
+//         .kids-middle {
+//             display: none;
+//         }
+        
+//         .kids-big {
+//             display: inherit;
+//             margin-left: 10%;
+//         }
+//     }
+// }

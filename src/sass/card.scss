@@ -1,0 +1,70 @@
+.card {
+    display: inline-block;
+    width: 99%;
+    height: 230px;
+    margin-top: -10px;
+    text-align: center;
+
+
+    img {
+        border: 3px solid $borders;
+        border-radius: 10px;
+
+        &:hover {
+            border-color: $orange;
+        }
+    }
+
+    h2 {
+        margin-top: -130px;
+        color: $text;
+        text-shadow: $borders 2px 0 5px;
+        font-size: 30px;
+        
+        &:hover {
+            text-shadow: $borders 4px 0 7px;
+        }
+    }
+
+    h2.quiz-card {
+        margin-top: -60px;
+        font-size: 25px;
+        text-shadow: 2px 2px 5px $borders, -2px -2px 5px $borders;
+        
+        &:hover {
+            text-shadow: 3px 3px 5px $borders, -3px -3px 5px $borders;
+        }
+    }
+    
+}
+
+.card-result {
+    border: 2px solid $borders;
+    border-radius: 10px;
+    padding-top: 20px;
+    margin: 5px;
+    width: 96%;
+    height: 320px;
+    background-color: rgba(241, 186, 144, 0.5);
+    background-image: url('../assets/bg1.png');
+}
+
+@media (min-width: 620px) {
+    .card {
+        width: 49%;
+    }
+
+    .card-result {
+        width: 47%;
+    }
+}
+
+@media (min-width: 1270px) {
+    .card {
+        width: 33%;
+    }
+    
+    .card-result {
+        width: 31%;
+    }
+}

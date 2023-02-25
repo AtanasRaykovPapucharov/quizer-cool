@@ -1,0 +1,34 @@
+{
+  "Тестове и задачи": "/home",
+  "Курсове": {
+    "Математика": {
+      "Подготовка за НВО след 4 клас": "/courses/math-4",
+      "Подготовка за НВО след 7 клас": "/courses/math-7",
+      "Подготовка за НВО след 10 клас": "/courses/math-10"
+    },
+    "Програмиране": {
+      "Основи на C#": "/courses/csharp-fundamentals",
+      "Основи на Java Script": "/courses/js-fundamentals",
+      "Основи на Type Script": "/courses/ts-fundamentals"
+    },
+    "Уеб технологии": {
+      "Основи на HTML": "/courses/html-fundamentals",
+      "Основи на CSS": "/courses/css-fundamentals",
+      "Основи на Java Script": "/courses/js-fundamentals",
+      "Основи на Type Script": "/courses/ts-fundamentals",
+      "Основи на React JS": "/courses/react-fundamentals",
+      "Основи на Node JS": "/courses/node-fundamentals",
+      "Основи на Next JS": "/courses/next-fundamentals"
+    }
+  },
+  "Програми и материали": {
+    "Математика": "/subject/math",
+    "Български език и литература": "/subject/bulgarian"
+  },
+  "Блог": {
+    "България": "/blog/bg",
+    "По света": "/blog/world",
+    "Технологии": "/blog/tech",
+    "Самоусъвършенстване": "/blog/self-improvement"
+  }
+}
