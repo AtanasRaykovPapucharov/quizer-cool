@@ -4,16 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ["cdn.sanity.io"],
-  },
-  redirects: async () => {
-    return [
-      {
-        source: "/",
-        destination: "/home",
-        permanent: true,
-      },
-    ];
-  },
+  }
 };
 
 module.exports = nextConfig;

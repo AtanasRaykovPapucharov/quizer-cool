@@ -56,7 +56,7 @@ const Header: NextComponentType = () => {
 
     <header className='header container-flex-row'>
       <div className='aside flex-item-1' onClick={() => dispatch(action(ActionType.IS_MENU_CLOSED, true))}>
-        <Link href='/home'>
+        <Link href='/'>
           <Image
             className='logo animate__animated animate__swing' 
             src='logo.png'
