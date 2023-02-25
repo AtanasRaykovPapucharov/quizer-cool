@@ -7,7 +7,7 @@ const ERROR_404 = () => {
   const router = useRouter()
 
   useEffect(() => {
-    setTimeout(() => router.push('/home'), 5300)
+    setTimeout(() => router.push('/'), 5300)
   }, [router])
 
   return <section className='center'>
