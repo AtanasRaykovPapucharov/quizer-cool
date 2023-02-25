@@ -7,7 +7,7 @@ const Card = ({quiz: article}: any) => {
   const props = {
     image: article.image || article.mainImage,
     alt: article.title,
-    width:280,
+    width:286,
     height: 200
   }
   

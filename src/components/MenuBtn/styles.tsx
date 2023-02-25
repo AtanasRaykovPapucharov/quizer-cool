@@ -4,7 +4,7 @@ export const MenuBtnCss: CSSProperties = {
   cursor: 'pointer',
   maxWidth: '30px',
   float: 'right',
-  paddingRight: '1px'
+  paddingRight: '3px'
 }
 
 export const ProfileBtnCss: CSSProperties = {
