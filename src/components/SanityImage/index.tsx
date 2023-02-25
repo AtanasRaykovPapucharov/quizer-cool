@@ -12,7 +12,7 @@ type SanityImageType = {
 }
 
 const SanityImage = ( { image, alt, width, height, style }: SanityImageType) => {
-  const imageProps: any = useNextSanityImage(client, image)
+  const imageProps: any = useNextSanityImage(client, image) 
 
   return (
     <Image 
