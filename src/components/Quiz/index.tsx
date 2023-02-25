@@ -157,9 +157,6 @@ const Quiz: React.FC<QuizType> = ({
         )
       }
     })
-    // if (isTestStarted && confirm('Наистина ли искаш теста да приключи?') === true) {
-    //   quizFinished()        
-    // }
   }
 
   // Arrows

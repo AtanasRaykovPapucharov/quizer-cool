@@ -7,7 +7,6 @@ import { useAppDispatch } from '../../redux/hooks/useAppDispatch'
 import Header from '../Header'
 import Menu from '../Menu'
 import Calendar from '../Calendar'
-import Contacts from '../Contacts'
 
 const Layout = ({ children }: any): JSX.Element => {
   const dispatch = useAppDispatch()
