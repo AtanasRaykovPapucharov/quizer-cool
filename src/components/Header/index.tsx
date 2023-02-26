@@ -62,7 +62,7 @@ const Header: NextComponentType = () => {
             src='logo.png'
             alt="logo" 
             width={200} 
-            height={113}
+            height={130}
             loader={logoLoaderq}
             priority
           />

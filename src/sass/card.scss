@@ -19,7 +19,7 @@
         margin-top: -130px;
         color: $text;
         text-shadow: $borders 2px 0 5px;
-        font-size: 30px;
+        font-size: 22px;
         
         &:hover {
             text-shadow: $borders 4px 0 7px;
@@ -28,7 +28,7 @@
 
     h2.quiz-card {
         margin-top: -60px;
-        font-size: 25px;
+        font-size: 22px;
         text-shadow: 2px 2px 5px $borders, -2px -2px 5px $borders;
         
         &:hover {
@@ -42,8 +42,9 @@
     border: 2px solid $borders;
     border-radius: 10px;
     padding-top: 20px;
-    margin: 5px;
-    width: 96%;
+    display: inline-block;
+    margin: 5px 5px 5px 35px;
+    width: 280px;
     height: 320px;
     background-color: rgba(241, 186, 144, 0.5);
     background-image: url('../assets/bg1.png');
@@ -56,6 +57,7 @@
 
     .card-result {
         width: 47%;
+        margin: 5px;
     }
 }
 

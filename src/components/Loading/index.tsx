@@ -22,6 +22,9 @@ const Loading = () =>  {
   }, [])
 
   return (
+    <>
+    <br />
+    <br />
    <Image 
       src="loader.gif"
       alt='loading...' 
@@ -30,6 +33,16 @@ const Loading = () =>  {
       loader={customLoader}
       priority
     />
+    <br />
+   <Image 
+      src="loader.gif"
+      alt='loading...' 
+      width={w} 
+      height={h} 
+      loader={customLoader}
+      priority
+    />
+    </>
   )
 }
 

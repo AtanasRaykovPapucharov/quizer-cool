@@ -162,7 +162,7 @@ const Quiz: React.FC<QuizType> = ({
   // Arrows
   const leftArrowClicked = () => {
     let value = +questionNumber - 1
-    if(value < 1) value = questionsCount
+    if(value < 1) value = 1
 
     selectAnswer(answers[value - 1])
     setQuestionNumber(value)
@@ -425,6 +425,14 @@ const Quiz: React.FC<QuizType> = ({
               </div>
             }
           </div> 
+          
+          <button 
+              onClick={onQuizFinished}
+              onMouseEnter={(e: any) => { e.target.style.opacity = 0.8 }}
+              onMouseLeave={(e: any) => { e.target.style.opacity = 1 }}
+              style={{...BTN, backgroundColor: Colors.BtnFinish}}>
+              КРАЙ
+          </button>
       </div>
       : null }
 

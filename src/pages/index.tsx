@@ -44,7 +44,7 @@ export default function Home() {
   return (
   <>
     {
-      quizList.length == 0 ? <Loading /> :
+    quizList.length == 0 ? <Loading /> :
     <main>
       <h2 className='center'>Тестове и задачи</h2>
       <div className='container-resp-col'>
