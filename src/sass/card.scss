@@ -16,7 +16,7 @@
 
     h2 {
         margin-top: 0px;
-        font-size: 26px;
+        font-size: 22px;
         color: $text;
         text-shadow: 2px 2px 5px $borders, -2px -2px 5px $borders;
         
@@ -40,9 +40,13 @@
         display: inline-block;
         margin-bottom: 30px;
         width: 280px;
-        height: 320px;
+        height: 340px;
         background-color: rgba(241, 186, 144, 0.5);
         background-image: url('../assets/bg1.png');
+
+        h2 {
+            font-size: 26px;
+        }
     }
 }
 

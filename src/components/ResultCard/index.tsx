@@ -24,7 +24,7 @@ const ResultCard: React.FC<ResultType> = ({
         </h4>
         <h3>{description}</h3>
         <h3>
-          {'Брой верни отговори: '}{correctAnswersCount}
+          {'Верни отговори: '}{correctAnswersCount}
           <br />
           {'В проценти: '}{Math.round(correctAnswersCount*100/questionsCount)}{' %'}
         </h3>
