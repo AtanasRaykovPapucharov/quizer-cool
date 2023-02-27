@@ -84,6 +84,7 @@ export default function QuizerHome() {
         </div>
       </div>
       <br />
+      <br />
       <main>
         { 
           currentQuizList.length > 0 ? 

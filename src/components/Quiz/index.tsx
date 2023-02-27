@@ -368,7 +368,7 @@ const Quiz: React.FC<QuizType> = ({
                 null 
                 }
                 <br />
-                <em style={{float: "left"}}>Натиснете буквата с отговор</em>
+                <em>Натиснете буквата с отговор</em>
                 <br />
                 <br />
                 {
@@ -435,7 +435,9 @@ const Quiz: React.FC<QuizType> = ({
             }
           </div> 
           <hr />
-          <br /> 
+          <em>Завършете теста</em>
+          <br />
+          <br />  
           <button 
               onClick={onQuizFinished}
               onMouseEnter={(e: any) => { e.target.style.opacity = 0.8 }}
