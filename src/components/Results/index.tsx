@@ -5,9 +5,9 @@ const Results = ({ results }: any) => {
   return(
     <>
       { 
-          results && results.length !== 0 ? 
-          results.map((res: ResultType, i: number) => <ResultCard key={i} {...res} />) :
-          <h2 className='center'>Няма намерени резултати</h2> 
+        results && results.length !== 0 ? 
+        results.map((res: ResultType, i: number) => <ResultCard key={i} {...res} />) 
+        : <h2 className='center'>Няма намерени резултати</h2> 
       }
     </>
   )

@@ -12,10 +12,10 @@ const Card = ({quiz: article}: any) => {
   }
   
   return (
-    <article className='card animate__animated animate__pulse'>
+    <article className='card card-quiz animate__animated animate__pulse'>
       <Link href={`/quiz/${article._id}`}>
         <SanityImage {...props} />
-        <h2 className='quiz-card'>
+        <h2 className='title-quiz'>
           {quizDescription}
         </h2>
       </Link>

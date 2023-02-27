@@ -60,7 +60,7 @@ const Quiz: React.FC<QuizType> = ({
   const questionsCount: number = minutes/3
   
   const router = useRouter()
-  const [isTestStarted, setIsTestStarted ] = useState<boolean>(false)
+  const [isTestStarted, setIsTestStarted ] = useState<boolean>(true)
   const [isTextVisible, setIsTextVisible ] = useState<boolean>(false)
   const [questionNumber, setQuestionNumber] = useState(1)
   const [answers, setAnswers] = useState(Array(questionsCount))
@@ -167,9 +167,10 @@ const Quiz: React.FC<QuizType> = ({
     selectAnswer(answers[value - 1])
     setQuestionNumber(value)
   }
+
   const rightArrowClicked = () => { 
     let value = +questionNumber + 1
-    if(value > questionsCount) value = 1
+    if(value > questionsCount) value = questionsCount
 
     selectAnswer(answers[value - 1])
     setQuestionNumber(value)
@@ -194,9 +195,15 @@ const Quiz: React.FC<QuizType> = ({
     <div className='quiz-wrapper container-resp-col'>
       <aside className='flex-item-2' style={QUIZ}>
         <div>
-          <h2>{titleBg} - {grade} клас</h2>
-          <h2>ТЕСТ</h2>
-          <h2>{description}</h2>
+          <h2>
+            ТЕСТ
+            <br />
+            {titleBg}
+            <br />
+            {grade} клас
+            <br />
+          </h2>
+          <h4><em>{description}</em></h4>
           <div className='container-flex-row'>
             <div className='flex-item-1'></div>
             { isTestStarted ? 
@@ -204,7 +211,7 @@ const Quiz: React.FC<QuizType> = ({
               <Counter isStarted={isTestStarted} {...counterProps} />
             </div>
             : null }
-            <div className='flex-item-2'>
+            {/* <div className='flex-item-2'>
             {
               !isTestStarted ? 
                 <button 
@@ -222,10 +229,9 @@ const Quiz: React.FC<QuizType> = ({
                     КРАЙ
                 </button>
             }
-            </div>
+            </div> */}
             <div className='flex-item-1'></div>
           </div>
-          <br />
         </div>
       </aside>
 
@@ -361,7 +367,10 @@ const Quiz: React.FC<QuizType> = ({
                 /> :
                 null 
                 }
-                <br /><br />
+                <br />
+                <em style={{float: "left"}}>Натиснете буквата с отговор</em>
+                <br />
+                <br />
                 {
                   questions[questionNumber - 1].answers.map((a: AnswerType, i: number) => {
                     return <div key={i} className='container-flex-row'>
@@ -376,7 +385,7 @@ const Quiz: React.FC<QuizType> = ({
                           /> : null
                         }
                       </div>
-                      <div className='flex-item-3 center'>
+                      <div className='flex-item-2 center'>
                         <button 
                           key={i} 
                           id={'btn-' + i} 
@@ -391,7 +400,7 @@ const Quiz: React.FC<QuizType> = ({
                         </button>
                       </div>
 
-                      <div className='flex-item-3 center'>
+                      <div className='flex-item-4 center'>
                         { 
                           a.value ? <div  style={{ paddingTop: '7px', color: 'rgb(47,107,172)' }}>
                             <span>{a.value}</span>
@@ -425,7 +434,8 @@ const Quiz: React.FC<QuizType> = ({
               </div>
             }
           </div> 
-          
+          <hr />
+          <br /> 
           <button 
               onClick={onQuizFinished}
               onMouseEnter={(e: any) => { e.target.style.opacity = 0.8 }}
