@@ -4,7 +4,7 @@ export const MenuCss: CSSProperties = {
   visibility: 'hidden',
   position: 'absolute',
   top: '134px',
-  right: '0px',
+  right: '1px',
   width: '220px',
   minHeight: '260px',
   border: '4px solid rgb(244, 162, 50)',
