@@ -64,9 +64,12 @@ function JsonTree(json: {} | string): ReactNode {
                         {renderNodes(node.children)}
                     </ul>
                 </> :
-                <Link href={node.value} onClick={onClickLink}>
-                    {node.title}
-                </Link>
+                <>
+                    <span>{"❂ "}</span>
+                    <Link href={node.value} onClick={onClickLink}>
+                        {node.title}
+                    </Link>
+                </>
             }
         </li> )
     }
@@ -76,6 +79,6 @@ function JsonTree(json: {} | string): ReactNode {
             {renderNodes(objectToArray(json))}
         </ul>
     )
-}
+} 
 
 export default JsonTree
