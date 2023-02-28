@@ -46,7 +46,7 @@ export default function QuizerHome() {
     {
     quizList.length == 0 ? <Loading /> :
     <main>
-      <h2 className='center'>Тестове и задачи</h2>
+      <h2 className='center'>ТЕСТОВЕ</h2>
       <div className='container-resp-col'>
         <div className='flex-item-1 drop'>
           <label>Предмет: </label>
@@ -74,10 +74,14 @@ export default function QuizerHome() {
           <label>Времетраене: </label>
           <select onChange={(e: any) => setQuizTime(e.target.value) }>
             <option value="All">Всички</option>
-            <option value="9">9 мин.</option>
             {
-              [...Array(4)].map((el: any, i: number) => {
-                return <option key={i} value={`${(i+1)*15}`}>{(i+1)*15} мин.</option>
+              [...Array(5)].map((el: any, i: number) => {
+                return <option key={i} value={`${(i+1)*3}`}>{(i+1)*3} мин.</option>
+              })
+            }
+            {
+              [...Array(5)].map((el: any, i: number) => {
+                return <option key={i*i} value={`${15 + (i+1)*15}`}>{15 + (i+1)*15} мин.</option>
               })
             }
           </select>

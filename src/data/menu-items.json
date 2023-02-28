@@ -1,5 +1,5 @@
 {
-  "Математика": "/courses/math",
-  "Програмиране с JavaScript": "/courses/js-programming",
-  "Опознай България": "/blog/bg"
+  "МАТЕМАТИКА": "/courses/math",
+  "ПРОГРАМИРАНЕ": "/courses/js-programming",
+  "БЪЛГАРИЯ": "/blog/bg"
 }

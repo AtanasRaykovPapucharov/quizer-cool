@@ -66,6 +66,8 @@ const Menu = () =>  {
         <div className="menu-wrapper" style={!menuClosed ? {...MenuCss, visibility: "visible"} : MenuCss}>
           <h3 className='shadowed'>Избери: </h3>
           {JsonTree(MainMenu)}
+          <hr />
+          {JsonTree(MenuItems)}
         </div>
       }
     </>

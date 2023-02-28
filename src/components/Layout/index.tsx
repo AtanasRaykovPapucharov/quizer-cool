@@ -18,8 +18,8 @@ const Layout = ({ children }: any): JSX.Element => {
       <meta httpEquiv='X-UA-Compatible" content="IE=edge' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <meta name='description' content='School Quiz' />
-      <link rel='icon' type='image/png' href='/icon.png' />
-      <title>QUIZER'S COOL</title>
+      <link rel='icon' type='image/png' href='/icon.ico' />
+      <title>QUIZER'S</title>
     </Head>
     
     <div className='wrapper'>
@@ -31,11 +31,10 @@ const Layout = ({ children }: any): JSX.Element => {
 
       <br />
       <footer id="footer-global">
-        {/* <Calendar /> */}
-        {/* <br />
-        <Contacts /> */}
+        <Calendar />
+        <br />
       <section className='topper center'>
-        {/* Учим и се забавляваме! */}
+        Учи, играй и се забавлявай!
       </section>
       </footer>
       <br />

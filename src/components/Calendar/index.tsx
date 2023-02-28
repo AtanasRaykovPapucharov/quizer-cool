@@ -65,8 +65,8 @@ export default function Calendar() {
                 <Image 
                     src="kids.png"
                     alt="kids" 
-                    width={360}  
-                    height={110}
+                    width={210}  
+                    height={103}
                     loader={() => KidsImg}
                     priority
                 />
@@ -76,7 +76,7 @@ export default function Calendar() {
             </h3>
             {/* <h4 className="center"><em>Първият е безплатен (само онлайн)</em></h4> */}
             {/* <h4>Запиши се</h4> */}
-            <h4><em>Избери ден и свободен час</em></h4>
+            <h4 className="center"><em>Избери ден и свободен час</em></h4>
             <div>
             {
                 [...Array(4)].map((date: any, i : number) => {

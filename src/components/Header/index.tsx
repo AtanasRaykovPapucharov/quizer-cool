@@ -16,7 +16,7 @@ const logoLoaderq = () => {
   return `https://res.cloudinary.com/hapiherb/image/upload/v1677187233/lgo_w7fpg1.png`
 }
 const logoLoader = () => {
-  return `https://res.cloudinary.com/hapiherb/image/upload/v1674728696/LOGO_wgyr1w.png`
+  return `https://res.cloudinary.com/hapiherb/image/upload/v1677578105/logo_q6u5gu.png`
 }
 
 const kidsSmallLoader = () => {
@@ -51,7 +51,7 @@ const Header: NextComponentType = () => {
   return (
     <>
     <section className='topper center'>
-      {/* Учим и се забавляваме! */}
+      Учи, играй и се забавлявай!
     </section>
 
     <header className='header container-flex-row'>
@@ -61,14 +61,14 @@ const Header: NextComponentType = () => {
             className='logo animate__animated animate__swing' 
             src='logo.png'
             alt="logo" 
-            width={200} 
-            height={130}
-            loader={logoLoaderq}
+            width={240} 
+            height={66}
+            loader={logoLoader}
             priority
           />
         </Link>
       </div>
-      <div className='flex-item-4 center' onClick={() => dispatch(action(ActionType.IS_MENU_CLOSED, true))}>
+      <div className='flex-item-2 center' onClick={() => dispatch(action(ActionType.IS_MENU_CLOSED, true))}>
         <Image 
           className='kids-small animate__animated animate__backInLeft' 
           src='kids.png'

@@ -50,7 +50,7 @@ export default function Profile() {
         <div>
             {/* { username && <h2 className='center shadowed' > Профил на {username}</h2> } */}
 
-            <h2 className='center'>Резултати</h2>
+            <h2 className='center'>РЕЗУЛТАТИ</h2>
             <section className='paginator'>
                 <Results results={currentItems} />
                 <ReactPaginate

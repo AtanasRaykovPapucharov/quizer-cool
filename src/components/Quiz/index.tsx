@@ -257,7 +257,6 @@ const Quiz: React.FC<QuizType> = ({
                   className='overview center' 
                   style={isTextVisible ? {...TEXT, display: 'inherit'} : {...TEXT, display: 'none' }}
                 >
-                  <h2 className='center'>{overviewTitle}</h2>
                   {
                     overview ? 
                     <div className='animate__animated animate__fadeInDown'>
@@ -368,6 +367,7 @@ const Quiz: React.FC<QuizType> = ({
                 null 
                 }
                 <br />
+                <hr />
                 <em>Натиснете буквата с отговор</em>
                 <br />
                 <br />
@@ -430,7 +430,6 @@ const Quiz: React.FC<QuizType> = ({
                     </div>
                   })
                 }
-                <br />
               </div>
             }
           </div> 

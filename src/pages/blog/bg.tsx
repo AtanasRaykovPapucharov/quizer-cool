@@ -1,0 +1,10 @@
+import MapBg from "../../components/MapBg";
+
+export default function Bg() {
+  return (
+    <main>
+      <h2 className="center">БЪЛГАРИЯ</h2>
+      <MapBg />
+    </main>
+  )
+}
