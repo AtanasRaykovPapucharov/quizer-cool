@@ -64,10 +64,12 @@ const Menu = () =>  {
     <>
       {
         <div className="menu-wrapper" style={!menuClosed ? {...MenuCss, visibility: "visible"} : MenuCss}>
-          <h3 className='shadowed'>Избери: </h3>
-          {JsonTree(MainMenu)}
-          <hr />
-          {JsonTree(MenuItems)}
+          <h3 className='center shadowed' style={{marginTop: "15px"}}>Избери: </h3>
+          <div style={{marginTop: "-15px"}}>
+            {JsonTree(MainMenu)}
+            <hr />
+            {JsonTree(MenuItems)}
+          </div>
         </div>
       }
     </>
