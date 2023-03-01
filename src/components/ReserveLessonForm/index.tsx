@@ -37,7 +37,7 @@ export default function ReserveLessonForm({ date, time }: any) {
 
     try {
       const resp: AxiosResponse<any, any> = await axios.post("/api/business", data)
-      toast("Успешно се записахте.")
+      if(resp.data == "OK") alert("Успешно се регистрирахте")
     } 
     catch (AxiosError) {
       console.log(AxiosError)
