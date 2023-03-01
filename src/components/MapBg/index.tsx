@@ -77,6 +77,8 @@ export default function MapBg(): ReactElement {
   return (
     <>
     <div className="container-resp-col" >
+      <div className='center flex-item-1'>
+      </div> 
       <div className="flex-item-1">
         <main className='weather-app' style={MAIN}>
           <header className='container-flex-row' style={HEADER}>
@@ -135,6 +137,8 @@ export default function MapBg(): ReactElement {
           </section>
         </main>
       </div>
+      <div className='center flex-item-1'>
+      </div> 
     </div>
     <br />
     <div>

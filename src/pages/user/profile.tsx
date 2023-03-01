@@ -1,15 +1,17 @@
 import { useRouter } from 'next/router'
 import { CSSProperties, useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate'
+import { Bar, BarChart, CartesianGrid, Legend, ReferenceLine, Tooltip, XAxis, YAxis } from 'recharts'
 import Results from '../../components/Results'
 import { ResultType } from '../../types/ResultType'
 
 export default function Profile() {
+    const [barData, setBarData] = useState<any[]>([])
     const [username, setUsername] = useState<string | null>(null)
     const [results, setResults] = useState<ResultType[]>([])
     const router = useRouter()
     
-    const [currentItems, setCurrentItems] = useState(null)
+    const [currentItems, setCurrentItems] = useState([])
     const [pageCount, setPageCount] = useState(0)
     const [itemOffset, setItemOffset] = useState(0)
     const itemsPerPage = 3
@@ -27,6 +29,21 @@ export default function Profile() {
         if(window.localStorage.getItem('zita-user-results')) {
             const resultsString = window.localStorage.getItem('zita-user-results')
             let resultsArray = resultsString ? JSON.parse(resultsString) : []
+
+            // bar charts
+            if(resultsArray.length > 2) {
+                let bars = [...barData];
+                resultsArray.forEach((res: any) => {
+                    bars.push({
+                        "title": `${res.title} - ${res.grade} клас`,
+                        "Верни отговори [%]": Math.round(res.correctAnswersCount*100/+res.description?.split(' ')[0])
+                    })
+                });
+
+                setBarData(bars)
+            }
+
+            //----------------------------
             resultsArray = [...resultsArray].reverse()
 
             setResults(resultsArray)
@@ -51,6 +68,44 @@ export default function Profile() {
             {/* { username && <h2 className='center shadowed' > Профил на {username}</h2> } */}
 
             <h2 className='center'>РЕЗУЛТАТИ</h2>
+            <br />
+
+            {
+                currentItems.length > 2 &&
+                <div className='container-resp-col'>
+                        
+                    <div className='center flex-item-1'> 
+                        {/* <BarChart width={360} height={280} data={barData}>
+                            <CartesianGrid stroke="rgb(73, 104, 142)" strokeDasharray="3 3" />
+                            <XAxis dataKey="title" />
+                            <YAxis />
+                            <Tooltip />
+                            <ReferenceLine y={100} stroke="green" />
+                            <Legend />
+                            <Bar dataKey="Верни отговори [%]" fill="rgb(73, 104, 142)" />
+                        </BarChart> */}
+                    </div>  
+                            
+                    <div className='center flex-item-1'> 
+                        <BarChart width={360} height={280} data={barData}>
+                            <CartesianGrid stroke="rgb(73, 104, 142)" strokeDasharray="3 3" />
+                            <XAxis dataKey="title" />
+                            <YAxis />
+                            <Tooltip />
+                            <ReferenceLine y={100} stroke="green" />
+                            <Legend />
+                            <Bar dataKey="Верни отговори [%]" fill="rgb(73, 104, 142)" />
+                        </BarChart>
+                    </div> 
+                    <div className='center flex-item-1'>
+                    </div> 
+
+                </div>  
+            }
+
+            <br />
+            <br />
+
             <section className='paginator'>
                 <Results results={currentItems} />
                 <ReactPaginate

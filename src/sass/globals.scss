@@ -23,6 +23,10 @@ body {
         border: 3px solid $borders;
         color: $borders;
     }
+
+    g text {
+        fill: $borders;
+    }
 }
 
 body hr {
