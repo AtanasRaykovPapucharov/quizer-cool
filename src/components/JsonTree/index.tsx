@@ -65,7 +65,7 @@ function JsonTree(json: {} | string): ReactNode {
                     </ul>
                 </> :
                 <>
-                    <span>{"❂ "}</span>
+                    <span>{"‣ "}</span>
                     <Link href={node.value} onClick={onClickLink}>
                         {node.title}
                     </Link>

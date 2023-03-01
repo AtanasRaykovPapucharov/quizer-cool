@@ -9,8 +9,7 @@ export enum Colors {
 export const HR: CSSProperties = { width: '90%', marginLeft: '2px' }
 
 export const MAIN: CSSProperties = { 
-    marginTop: '-30px',
-    paddingLeft: '7px' 
+    margin: '-30px 0 0 7px'
 }
 
 export const ASIDE: CSSProperties = {
