@@ -45,7 +45,7 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse<DataType>) => {
   console.log(`IP: ${ip}`)
   console.log(data)
   
-  res.status(200).send('OK')
+  res.status(200).send('Успешно се регистрирахте.')
 })
 
 export default handler

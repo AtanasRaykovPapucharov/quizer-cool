@@ -37,11 +37,10 @@ export default function ReserveLessonForm({ date, time }: any) {
 
     try {
       const resp: AxiosResponse<any, any> = await axios.post("/api/business", data)
-      if(resp.data == "OK") alert("Успешно се регистрирахте")
+      alert(resp.data)
     } 
     catch (AxiosError) {
       console.log(AxiosError)
-      toast(`Грешни данни! ${AxiosError}`)
     }
     finally {
       router.push("/")
