@@ -44,7 +44,7 @@ export default function ReserveLessonForm({ date, time }: any) {
       toast(`Грешни данни! ${AxiosError}`)
     }
     finally {
-      router.push("/home")
+      router.push("/")
       router.reload()
     }
   }
@@ -57,7 +57,7 @@ export default function ReserveLessonForm({ date, time }: any) {
                 <br />
                 <input 
                     name="tel" 
-                    type="tel"
+                    type="text"
                     {...register("tel")}
                     className={`form-control ${errors.tel ? "is-invalid" : ""}`}
                 />
