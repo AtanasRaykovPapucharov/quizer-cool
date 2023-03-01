@@ -17,7 +17,7 @@ const Layout = ({ children }: any): JSX.Element => {
       <meta charSet='UTF-8' />
       <meta httpEquiv='X-UA-Compatible" content="IE=edge' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-      <meta name='description' content='School Quiz' />
+      <meta name='description' content='Тестове и задачи за ученици' />
       <link rel='icon' type='image/png' href='/icon.ico' />
       <title>QUIZER'S</title>
     </Head>
@@ -34,7 +34,7 @@ const Layout = ({ children }: any): JSX.Element => {
         <Calendar />
         <br />
       <section className='topper center'>
-        Тестове и задачи
+        Тестове и задачи за ученици
       </section>
       </footer>
       <br />
