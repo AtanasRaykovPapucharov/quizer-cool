@@ -51,7 +51,7 @@ const Header: NextComponentType = () => {
   return (
     <>
     <section className='topper center'>
-      Учи, играй и се забавлявай!
+      Тестове и задачи
     </section>
 
     <header className='header container-flex-row'>

@@ -71,7 +71,7 @@ export default function Profile() {
             <br />
 
             {
-                currentItems.length > 2 &&
+                currentItems.length > 1 &&
                 <div className='container-resp-col'>
                         
                     <div className='center flex-item-1'> 

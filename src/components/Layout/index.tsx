@@ -34,7 +34,7 @@ const Layout = ({ children }: any): JSX.Element => {
         <Calendar />
         <br />
       <section className='topper center'>
-        Учи, играй и се забавлявай!
+        Тестове и задачи
       </section>
       </footer>
       <br />
