@@ -6,7 +6,7 @@ export const MenuCss: CSSProperties = {
   top: '134px',
   right: '1px',
   width: '220px',
-  minHeight: '260px',
+  minHeight: '330px',
   border: '4px solid rgb(244, 162, 50)',
   borderBottomLeftRadius: '10px',
   borderBottomRightRadius: '10px',

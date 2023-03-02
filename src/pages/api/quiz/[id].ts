@@ -14,11 +14,14 @@ handler.get(async (req: NextApiRequest, res: NextApiResponse<DataType>) => {
 
   quiz = quiz[0]
 
-  // fs.writeFileSync('./data/math-7-60.json', JSON.stringify(quiz))
-
   quiz.questions = orderedQuestions(quiz.questions)
 
   res.send(quiz)
+
+  // fs.writeFile(`./src/data/backup/${req.query.id}.json`, JSON.stringify(quiz), function (err) {
+  //   if (err) console.log(err);
+  //   console.log('File is created successfully.');
+  // });
 })
 
 function orderedQuestions(questions: QuestionType[]): QuestionType[] {

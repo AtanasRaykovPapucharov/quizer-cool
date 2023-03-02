@@ -33,9 +33,7 @@ const Layout = ({ children }: any): JSX.Element => {
       <footer id="footer-global">
         <Calendar />
         <br />
-      <section className='topper center'>
-        Тестове и задачи за ученици
-      </section>
+        <section className='topper center'></section>
       </footer>
       <br />
 

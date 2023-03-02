@@ -12,6 +12,7 @@ import { ActionType } from '../../redux/action/type'
 import JsonTree from '../JsonTree'
 import MainMenu from '../../data/main-menu.json'
 import MenuItems from '../../data/menu-items.json'
+import FooterItems from '../../data/footer-items.json'
 import { 
   LoginCss,
   LogoutCss,
@@ -47,7 +48,7 @@ const linkz = [
  
 const Menu = () =>  {
   const menuClosed = useAppSelector(state => state.isMenuClosed)
-  // const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch()
   // const [isAdmin, setIsAdmin] = useState(false)
 
   // useEffect(() => {
@@ -60,6 +61,10 @@ const Menu = () =>  {
   //   // }
   // }, [])
 
+  const faqLoader = () => {
+    return `https://res.cloudinary.com/hapiherb/image/upload/v1677763085/faq_cpybyb.png`
+  }
+
   return (
     <div className="menu-wrapper animate__animated animate__bounceInRight" style={!menuClosed ? {...MenuCss, visibility: "visible"} : MenuCss}>
       <h3 className='center shadowed' style={{marginTop: "15px"}}>Избери: </h3>
@@ -67,6 +72,25 @@ const Menu = () =>  {
         {JsonTree(MainMenu)}
         <hr />
         {JsonTree(MenuItems)}
+        <hr />
+        {JsonTree(FooterItems)}
+         
+        <Image 
+          className='animate__animated animate__backInDown menu-wrapper' 
+          src='finger.png'
+          alt="finger" 
+          width={84}   
+          height={90}
+          loader={faqLoader}
+          style={{
+            margin: '10px 0 0 70px'
+          }}
+          onClick={() => {
+            dispatch(action(ActionType.IS_MENU_CLOSED, false))
+            router.push("/faq")
+          }}
+          priority
+        /> 
       </div>
     </div>
   )

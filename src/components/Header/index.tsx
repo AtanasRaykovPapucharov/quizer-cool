@@ -7,6 +7,7 @@ import { useAppDispatch } from '../../redux/hooks/useAppDispatch'
 import MenuBtn from '../MenuBtn'
 import { useAppSelector } from '../../redux/hooks/useAppSelector'
 import { useEffect, useRef, useState } from 'react'
+import axios from 'axios'
 
 const fingerLoader = () => {
   return `https://res.cloudinary.com/hapiherb/image/upload/v1673819506/fing_vuasz0.png`
@@ -36,20 +37,22 @@ const Header: NextComponentType = () => {
   const menuClosed = useAppSelector(state => state.isMenuClosed)
   const dispatch = useAppDispatch()
 
-  const [state, setState] = useState({ num: 0 });
-  const counter = useRef(0);
+  // const [counter, setCounter] = useState(9);
   
-  useEffect(() => {
-    if (counter.current < 10) {
-      counter.current += 1;
-      const timer = setTimeout(() => setState({ num: state.num + 1 }), 1000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   axios
+  //     .get(`/api/counter`)
+  //     .then((resp: any) => { 
+  //       setCounter(+resp.data)
+  //     })
+  //     .catch((err) => console.log(err))
+  // }, []);
   
   return (
     <>
+    {/* <section className='counter'>
+      <em>Брой посещения: </em> {counter}
+    </section> */}
     <section className='topper center'>
       Тестове и задачи за ученици
     </section>

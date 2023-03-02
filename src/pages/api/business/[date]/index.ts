@@ -6,7 +6,7 @@ import { DataType } from '../../../../types/DataType'
 const handler = nc()
 
 handler.get(async (req: NextApiRequest, res: NextApiResponse<DataType>, next) => {
-  const business = await client.fetch(`*[_type == "business"] && date == '${req.query.date}'`)
+  const business = await client.fetch(`*[_type == "business" && date == "${req.query.date}"]`)
   
   res.send(business)
   next()

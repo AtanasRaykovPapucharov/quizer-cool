@@ -8,6 +8,6 @@ export const config: ClientConfig = {
   token: process.env.SANITY_AUTH_TOKEN
 };
 
-const client: any = createClient(config);
+const client: SanityClient = createClient(config);
 
 export default client;
