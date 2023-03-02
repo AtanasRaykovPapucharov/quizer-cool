@@ -39,13 +39,13 @@ function Faq() {
       <h2 className='center'>ЧЕСТО ЗАДАВАНИ ВЪПРОСИ</h2>
       {
         faq.map((obj: any, i: number) => {
-          return <>
+          return <div key={i}>
             <hr />
-            <article key={i}>
-              <h3>{obj.q}</h3>
+            <article>
+              <h3><strong>{obj.q}</strong></h3>
               <p><em>{obj.a}</em></p>
             </article>
-          </>
+          </div>
         })
       }
     </div> 
