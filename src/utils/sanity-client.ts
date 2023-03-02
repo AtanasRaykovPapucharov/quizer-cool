@@ -1,4 +1,4 @@
-import { createClient, SanityClient, type ClientConfig } from "@sanity/client";
+import { createClient, type ClientConfig } from "@sanity/client";
 
 export const config: ClientConfig = {
   projectId: "oir5cjyp",
@@ -8,6 +8,6 @@ export const config: ClientConfig = {
   token: process.env.SANITY_AUTH_TOKEN
 };
 
-const client: SanityClient = createClient(config);
+const client: any = createClient(config);
 
 export default client;
