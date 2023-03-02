@@ -61,18 +61,14 @@ const Menu = () =>  {
   // }, [])
 
   return (
-    <>
-      {
-        <div className="menu-wrapper" style={!menuClosed ? {...MenuCss, visibility: "visible"} : MenuCss}>
-          <h3 className='center shadowed' style={{marginTop: "15px"}}>Избери: </h3>
-          <div style={{marginTop: "-15px"}}>
-            {JsonTree(MainMenu)}
-            <hr />
-            {JsonTree(MenuItems)}
-          </div>
-        </div>
-      }
-    </>
+    <div className="menu-wrapper animate__animated animate__bounceInRight" style={!menuClosed ? {...MenuCss, visibility: "visible"} : MenuCss}>
+      <h3 className='center shadowed' style={{marginTop: "15px"}}>Избери: </h3>
+      <div style={{marginTop: "-15px"}}>
+        {JsonTree(MainMenu)}
+        <hr />
+        {JsonTree(MenuItems)}
+      </div>
+    </div>
   )
 }
 

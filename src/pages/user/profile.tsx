@@ -33,10 +33,18 @@ export default function Profile() {
             // bar charts
             if(resultsArray.length > 2) {
                 let bars = [...barData];
+
+                // if(resultsArray.length > 10) {
+                //     resultsArray = resultsArray.slice(resultsArray.length - 10, resultsArray.length)
+                // }
+
                 resultsArray.forEach((res: any) => {
+                    let all = +res.description?.split(' ')[0]
                     bars.push({
                         "title": `${res.title} - ${res.grade} клас`,
-                        "Верни отговори [%]": Math.round(res.correctAnswersCount*100/+res.description?.split(' ')[0])
+                        "Верни отговори [%]": Math.round(res.correctAnswersCount*100/all),
+                        "Верни отговори [брой]": res.correctAnswersCount,
+                        "Въпроси [брой]": all
                     })
                 });
 
@@ -68,22 +76,23 @@ export default function Profile() {
             {/* { username && <h2 className='center shadowed' > Профил на {username}</h2> } */}
 
             <h2 className='center'>РЕЗУЛТАТИ</h2>
-            <br />
 
+            <h3 className='center'>Разпределение на последните 10 резултата</h3>
             {
                 currentItems.length > 1 &&
-                <div className='container-resp-col'>
+                <div className='container-resp-col' style={{marginLeft: "-20px"}}>
                         
                     <div className='center flex-item-1'> 
-                        {/* <BarChart width={360} height={280} data={barData}>
+                        <BarChart width={360} height={280} data={barData.length > 10 ? barData.slice(barData.length - 10, barData.length) : barData}>
                             <CartesianGrid stroke="rgb(73, 104, 142)" strokeDasharray="3 3" />
                             <XAxis dataKey="title" />
                             <YAxis />
                             <Tooltip />
-                            <ReferenceLine y={100} stroke="green" />
+                            <ReferenceLine y={60} stroke="green" />
                             <Legend />
-                            <Bar dataKey="Верни отговори [%]" fill="rgb(73, 104, 142)" />
-                        </BarChart> */}
+                            <Bar dataKey="Въпроси [брой]" fill="rgb(34,145,206)" />
+                            <Bar dataKey="Верни отговори [брой]" fill="rgb(244, 162, 50)" />
+                        </BarChart>
                     </div>  
                             
                     <div className='center flex-item-1'> 
@@ -97,15 +106,15 @@ export default function Profile() {
                             <Bar dataKey="Верни отговори [%]" fill="rgb(73, 104, 142)" />
                         </BarChart>
                     </div> 
-                    <div className='center flex-item-1'>
-                    </div> 
 
                 </div>  
             }
 
             <br />
-            <br />
+            <hr />
 
+            <h3 className='center'>Карти с всички резултати</h3>
+            <br />
             <section className='paginator'>
                 <Results results={currentItems} />
                 <ReactPaginate

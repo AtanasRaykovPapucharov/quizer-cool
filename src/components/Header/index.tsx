@@ -24,7 +24,7 @@ const kidsSmallLoader = () => {
 }
 
 const kidsMidLoader = () => {
-  return `https://res.cloudinary.com/hapiherb/image/upload/v1673433497/kidz-m_hjld0d.png`
+  return `https://res.cloudinary.com/hapiherb/image/upload/v1677709530/kidz-m_hjld0d_hh7c49.png`; //`https://res.cloudinary.com/hapiherb/image/upload/v1673433497/kidz-m_hjld0d.png`
 }
 
 const kidsBigLoader = () => {
