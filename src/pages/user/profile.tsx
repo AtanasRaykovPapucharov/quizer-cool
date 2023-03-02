@@ -34,9 +34,9 @@ export default function Profile() {
             if(resultsArray.length > 2) {
                 let bars = [...barData];
 
-                // if(resultsArray.length > 10) {
-                //     resultsArray = resultsArray.slice(resultsArray.length - 10, resultsArray.length)
-                // }
+                if(resultsArray.length > 10) {
+                    resultsArray = resultsArray.slice(resultsArray.length - 10, resultsArray.length)
+                }
 
                 resultsArray.forEach((res: any) => {
                     let all = +res.description?.split(' ')[0]
@@ -80,10 +80,10 @@ export default function Profile() {
             <h3 className='center'>Разпределение на последните 10 резултата</h3>
             {
                 currentItems.length > 1 &&
-                <div className='container-resp-col' style={{marginLeft: "-20px"}}>
+                <div className='container-resp-col' style={{marginLeft: "-10px"}}>
                         
                     <div className='center flex-item-1'> 
-                        <BarChart width={360} height={280} data={barData.length > 10 ? barData.slice(barData.length - 10, barData.length) : barData}>
+                        <BarChart width={360} height={280} data={barData}>
                             <CartesianGrid stroke="rgb(73, 104, 142)" strokeDasharray="3 3" />
                             <XAxis dataKey="title" />
                             <YAxis />
