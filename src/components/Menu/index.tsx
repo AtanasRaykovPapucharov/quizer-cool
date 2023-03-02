@@ -76,9 +76,8 @@ const Menu = () =>  {
         {JsonTree(FooterItems)}
          
         <Image 
-          className='animate__animated animate__backInDown menu-wrapper' 
-          src='finger.png'
-          alt="finger" 
+          src='faq.png'
+          alt="faq" 
           width={84}   
           height={90}
           loader={faqLoader}
