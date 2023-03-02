@@ -75,7 +75,7 @@ const Menu = () =>  {
         <hr />
         {JsonTree(FooterItems)}
          
-        <Image 
+        {/* <Image 
           className='animate__animated animate__backInDown menu-wrapper' 
           src='finger.png'
           alt="finger" 
@@ -90,7 +90,7 @@ const Menu = () =>  {
             router.push("/faq")
           }}
           priority
-        /> 
+        />  */}
       </div>
     </div>
   )
