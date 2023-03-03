@@ -1,3 +1,6 @@
+
+import Image from 'next/image'
+
 function Faq() {
   const faq = [
     {
@@ -34,13 +37,29 @@ function Faq() {
     }
   ]
 
+  const faqLoader = () => {
+    return `https://res.cloudinary.com/hapiherb/image/upload/v1677763085/faq_cpybyb.png`
+  }
+
   return ( 
     <div>
-      <h2 className='center'>ЧЕСТО ЗАДАВАНИ ВЪПРОСИ</h2>
+      <br />
+      <Image 
+        src='faq.png'
+        alt="faq" 
+        width={84}   
+        height={90}
+        loader={faqLoader}
+        style={{
+          display: 'block',
+          margin: '0 auto'
+        }}
+        priority
+      /> 
       {
         faq.map((obj: any, i: number) => {
           return <div key={i}>
-            <hr />
+            <br />
             <article>
               <h3><strong>{obj.q}</strong></h3>
               <p><em>{obj.a}</em></p>
