@@ -2,7 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import Loading from "../Loading"
 import QuizCard from "../QuizCard"
-import { sortByAlphabet, sortByDate } from "../../helper/sort"
+import { sortByAlphabet, sortByNumber, sortByDate } from "../../helper/sort"
 
 export default function QuizerHome() {
   const [subjects, setSubjects] = useState<any[]>([])
@@ -16,8 +16,9 @@ export default function QuizerHome() {
     axios
       .get(`/api/quiz`)
       .then((resp: any) => { 
-        setQuizList(sortByDate(resp.data))
-        setCurrentQuizList(sortByDate(resp.data))
+        let q = resp.data
+        setQuizList(sortByNumber(q, "minutes"))
+        setCurrentQuizList(sortByNumber(q, "minutes"))
 
         return axios.get(`/api/categories`)
       })
