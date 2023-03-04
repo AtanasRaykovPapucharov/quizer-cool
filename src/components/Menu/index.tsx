@@ -73,7 +73,7 @@ const Menu = () =>  {
         <hr />
         {JsonTree(MenuItems)}
         <hr />
-        {JsonTree(FooterItems)}
+        {/* {JsonTree(FooterItems)} */}
          
         <Image 
           src='faq.png'
