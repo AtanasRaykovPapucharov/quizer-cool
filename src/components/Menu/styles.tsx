@@ -5,7 +5,7 @@ export const MenuCss: CSSProperties = {
   position: 'absolute',
   top: '134px',
   right: '1px',
-  width: '220px',
+  width: '230px',
   minHeight: '330px',
   border: '4px solid rgb(244, 162, 50)',
   borderBottomLeftRadius: '10px',
