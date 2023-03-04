@@ -1,7 +1,5 @@
 {
   "МАТЕМАТИКА": "/courses/math",
-  "ФИЗИКА": "/courses/physics",
-  "АНГЛИЙСКИ ЕЗИК": "/courses/english",
   "ПРОГРАМИРАНЕ": "/courses/js-programming",
   "УЕБ ТЕХНОЛОГИИ": "/courses/web"
 }
