@@ -31,9 +31,15 @@ const Layout = ({ children }: any): JSX.Element => {
 
       <br />
       <footer id="footer-global">
+        {/* <section className='topper center'>Уроци по математика</section>
+        <br />
         <Calendar />
         <br />
-        <section className='topper center'></section>
+        <br /> */}
+        <section 
+          className='topper center'
+          style={{paddingTop: "12px", fontSize: "18px"}}
+        >QUIZER'S©2023</section>
       </footer>
       <br />
 

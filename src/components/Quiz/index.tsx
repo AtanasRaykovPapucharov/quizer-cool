@@ -211,25 +211,6 @@ const Quiz: React.FC<QuizType> = ({
               <Counter isStarted={isTestStarted} {...counterProps} />
             </div>
             : null }
-            {/* <div className='flex-item-2'>
-            {
-              !isTestStarted ? 
-                <button 
-                    onClick={onQuizStarted}
-                    onMouseEnter={(e: any) => { e.target.style.opacity = 0.8 }}
-                    onMouseLeave={(e: any) => { e.target.style.opacity = 1 }}  
-                    style={{...BTN, backgroundColor: Colors.BtnStart}}>
-                    НАЧАЛО
-                </button> : 
-                <button 
-                    onClick={onQuizFinished}
-                    onMouseEnter={(e: any) => { e.target.style.opacity = 0.8 }}
-                    onMouseLeave={(e: any) => { e.target.style.opacity = 1 }}
-                    style={{...BTN, backgroundColor: Colors.BtnFinish}}>
-                    КРАЙ
-                </button>
-            }
-            </div> */}
             <div className='flex-item-1'></div>
           </div>
         </div>
@@ -347,7 +328,7 @@ const Quiz: React.FC<QuizType> = ({
                     {questions[questionNumber - 1].text}
                   </h3>
                 }
-
+                <br />
                 {
                 questions[questionNumber - 1].image ?
                 <SanityImage 
@@ -367,7 +348,7 @@ const Quiz: React.FC<QuizType> = ({
                 null 
                 }
                 <br />
-                <hr />
+                <br />
                 <em>Натиснете буквата с отговор</em>
                 <br />
                 <br />
@@ -434,8 +415,6 @@ const Quiz: React.FC<QuizType> = ({
             }
           </div> 
           <hr />
-          <em>Завършете теста</em>
-          <br />
           <br />  
           <button 
               onClick={onQuizFinished}

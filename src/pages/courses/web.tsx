@@ -12,7 +12,7 @@ export default function JsWeb() {
     return (
         <div>
             <h2 className='center'>
-                Курсове по УЕБ ТЕХНОЛОГИИ
+                УЕБ ТЕХНОЛОГИИ
             </h2>
             <h4 style={styles} className="center"><em>{basic.info}</em></h4>
             <div className='container-resp-col'>
@@ -20,7 +20,7 @@ export default function JsWeb() {
                 </div>
 
                 <div className='flex-item-1'>
-                    <h1 className="center">Няма активни</h1>
+                    <h1 className="center">Няма намерени</h1>
                 </div>
 
                 <div className='flex-item-1'>

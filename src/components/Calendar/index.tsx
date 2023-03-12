@@ -59,8 +59,6 @@ export default function Calendar() {
 
     return (
         <div style={CalendarWrapperStyles}>
-            <hr />
-            <br />
             <article className="center">
                 <Image 
                     src="kids.png"
@@ -71,11 +69,6 @@ export default function Calendar() {
                     priority
                 />
             </article>
-            <h3 className="center">
-                Уроци и консултации по Математика
-            </h3>
-            {/* <h4 className="center"><em>Първият е безплатен (само онлайн)</em></h4> */}
-            {/* <h4>Запиши се</h4> */}
             <h4 className="center"><em>Избери ден и свободен час</em></h4>
             <div>
             {

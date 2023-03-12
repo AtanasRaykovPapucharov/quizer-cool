@@ -20,15 +20,7 @@
         padding-left: 10%;
         font-size: 22px;
         color: $text;
-        text-shadow: 2px 2px 5px $borders, -2px -2px 5px $borders;
-        
-            &:hover {
-                text-shadow: 3px 3px 5px $borders, -3px -3px 5px $borders;
-            }
-        
-        &:hover {
-            text-shadow: $borders 4px 0 7px;
-        }
+        text-shadow: 2px 2px 5px $dark-blue, -2px -2px 5px $dark-blue;
     }
 
     h2.title-quiz {

@@ -74,7 +74,6 @@ export default function Profile() {
             {
                 currentItems.length > 1 &&
                 <>
-                    <h3 className='center'>Разпределение на резултатите</h3>
                     <div className='container-resp-col' style={{marginLeft: "-10px"}}>
                         <div className='center flex-item-1'> 
                             <BarChart width={360} height={280} data={barData}>
@@ -108,9 +107,9 @@ export default function Profile() {
 
             <br />
             <hr />
+            <br />
 
             <section className='paginator'>
-                <h3 className='center'>Всички резултати</h3>
                 <br />
                 <Results results={currentItems} />
                 <ReactPaginate
