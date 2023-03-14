@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-import {useAppSelector} from '../../redux/hooks/useAppSelector'
+import {useAppSelector} from '../../../redux/hooks/useAppSelector'
 
-import JsonTree from '../../components/JsonTree'
-import data1 from '../../data/programming-fundamentals.json'
-import data2 from '../../data/programming-advanced.json'
-import data3 from '../../data/programming-oop.json'
-import basic from '../../data/basic.json'
+import JsonTree from '../../../components/JsonTree'
+import data1 from '../../../data/programming-fundamentals.json'
+import data2 from '../../../data/programming-advanced.json'
+import data3 from '../../../data/programming-oop.json'
+import basic from '../../../data/basic.json'
 import { CSSProperties } from 'react'
 
 const styles: CSSProperties = {

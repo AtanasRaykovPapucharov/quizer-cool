@@ -31,11 +31,11 @@ const Layout = ({ children }: any): JSX.Element => {
 
       <br />
       <footer id="footer-global">
-        {/* <section className='topper center'>Уроци по математика</section>
+        <section className='topper center'>Уроци и консултации</section>
         <br />
         <Calendar />
         <br />
-        <br /> */}
+        <br />
         <section 
           className='topper center'
           style={{paddingTop: "12px", fontSize: "18px"}}

@@ -6,7 +6,7 @@ import Loading from "../Loading"
 import ReserveLessonForm from "../ReserveLessonForm"
 import { days, daysFull, hours, months, monthsFull } from "./data"
 import { BtnStyles, CloseStyles, CalendarWrapperStyles, DateFormStyles, DateStyles } from "./styles"
-import { CloseBtnImg, KidsImg } from "../../images"
+import { CloseBtnImg, KidsImg, Natalka } from "../../images"
 
 type DateType = {
     day: string,
@@ -63,9 +63,9 @@ export default function Calendar() {
                 <Image 
                     src="kids.png"
                     alt="kids" 
-                    width={210}  
-                    height={103}
-                    loader={() => KidsImg}
+                    width={100}  
+                    height={160}
+                    loader={() => Natalka}
                     priority
                 />
             </article>
