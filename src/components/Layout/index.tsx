@@ -30,12 +30,14 @@ const Layout = ({ children }: any): JSX.Element => {
       </main>
 
       <br />
-      <footer id="footer-global">
+      <footer id="footer-global" 
+      // style={{backgroundColor: "rgb(152,205,210)"}}
+      >
         <section className='topper center'>Уроци и консултации</section>
-        <br />
+        {/* <br /> */}
         <Calendar />
         <br />
-        <br />
+        {/* <br /> */}
         <section 
           className='topper center'
           style={{paddingTop: "12px", fontSize: "18px"}}

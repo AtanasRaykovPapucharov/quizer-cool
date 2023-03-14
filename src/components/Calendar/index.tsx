@@ -59,17 +59,18 @@ export default function Calendar() {
 
     return (
         <div style={CalendarWrapperStyles}>
+            <br />
             <article className="center">
                 <Image 
                     src="kids.png"
                     alt="kids" 
-                    width={100}  
-                    height={160}
-                    loader={() => Natalka}
+                    width={210}  
+                    height={103}
+                    loader={() => KidsImg}
                     priority
                 />
             </article>
-            <h4 className="center"><em>Избери ден и свободен час</em></h4>
+            <h4 className="center" style={{marginTop: "0px"}}><em>Избери ден и свободен час</em></h4>
             <div>
             {
                 [...Array(4)].map((date: any, i : number) => {
