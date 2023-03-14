@@ -12,7 +12,6 @@ import { ActionType } from '../../redux/action/type'
 import JsonTree from '../JsonTree'
 import MainMenu from '../../data/main-menu.json'
 import MenuItems from '../../data/menu-items.json'
-import FooterItems from '../../data/footer-items.json'
 import { 
   LoginCss,
   LogoutCss,
